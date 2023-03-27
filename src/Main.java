@@ -1,61 +1,30 @@
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+        int resultado = 0;
+        resultado = suma(2,4,5);
+        System.out.println(resultado);
 
-        int numeroIf = -5;
-
-        if (numeroIf < 0){
-            System.out.println("El valor es NEGATIVO");
-        }
-        else if (numeroIf > 0){
-            System.out.println("El valor es POSITIVO");
-        }
-         else {
-            System.out.println("El valor es 0");
-        }
-
-
-        int numeroWhile=0;
-
-        while (numeroWhile<3)
-        {
-            numeroWhile = numeroWhile + 1;
-            System.out.println(numeroWhile);
-        }
-
-        int numeroDo = 2;
-        do {
-            numeroDo = numeroDo + 1;
-            System.out.println(numeroDo);
-        }while (numeroDo<3);
-
-
-
-        for (int numeroFor=0; numeroFor <= 3 ; numeroFor++ )
-        {
-            System.out.println(numeroFor);
-        }
-
-
-        var estacion = "invierno";
-
-        switch (estacion)
-        {
-            case "verano":
-                System.out.println("Estas en VERANO");
-                break;
-            case "invierno":
-                System.out.println("Estas en INVIERNO");
-                break;
-            case "otoño":
-                System.out.println("Estas en OTOÑO");
-                break;
-            case "primavera":
-                System.out.println("Estas en PRIMAVERA");
-                break;
-            default:
-                System.out.println("No es ninguna ESTACION");
-        }
-
+        coche miCoche = new coche();
+        miCoche.AgregarPuerta();
+        System.out.println(miCoche.puertas);
     }
+
+public static int suma (int a, int b, int c)
+{
+   return a + b + c;
+
+}
+
+static class coche {
+    public int puertas = 0;
+
+    public void AgregarPuerta()
+    {
+        this.puertas++;
+    }
+
+}
+
+
+
 }
